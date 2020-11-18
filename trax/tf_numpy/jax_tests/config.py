@@ -51,7 +51,7 @@ def bool_env(varname: str, default: bool) -> bool:
     raise ValueError("invalid truth value %r for environment %r" % (val, varname))
 
 
-class Config(object):
+class Config():
   def __init__(self):
     self.values = {}
     self.meta = {}
@@ -128,7 +128,7 @@ class Config(object):
       already_configured_with_absl = True
 
 
-class NameSpace(object):
+class NameSpace():
   def __init__(self, getter):
     self._getter = getter
 

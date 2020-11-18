@@ -27,7 +27,7 @@ import tensorflow.compat.v2 as tf
 from trax.tf_numpy import numpy as np
 
 
-class Model(object):
+class Model():
   """A simple neural network with dense layers and sigmoid non-linearity.
 
   The network consists of `len(hidden_layers) + 1` dense layers. The sizes of

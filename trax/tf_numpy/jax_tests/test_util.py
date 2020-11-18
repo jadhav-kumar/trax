@@ -371,7 +371,7 @@ def format_test_name_suffix(opname, shapes, dtypes):
 
 # We use special symbols, represented as singleton objects, to distinguish
 # between NumPy scalars, Python scalars, and 0-D arrays.
-class ScalarShape(object):
+class ScalarShape():
   def __len__(self): return 0
 class _NumpyScalar(ScalarShape): pass
 class _PythonScalar(ScalarShape): pass

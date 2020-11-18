@@ -1380,7 +1380,7 @@ def _get_instance_key():
 
 # Don't use a namedtuple since nest considers that a tuple and unflattens and
 # flattens it.
-class ShardedNdArray(object):
+class ShardedNdArray():
   """Wrapper over ndarray that can contain tensors on multiple devices.
 
     This is returned by extensions.pmap, and contains the individual tensors on

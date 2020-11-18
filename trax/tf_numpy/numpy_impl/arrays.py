@@ -37,7 +37,7 @@ def convert_to_tensor(value, dtype=None):
   return tf.convert_to_tensor(value, dtype=dtype)
 
 
-class ndarray(object):  # pylint: disable=invalid-name
+class ndarray():  # pylint: disable=invalid-name
   """Equivalent of numpy.ndarray backed by TensorFlow tensors.
 
   This does not support all features of NumPy ndarrays e.g. strides and
@@ -245,7 +245,7 @@ tf.register_tensor_conversion_function(ndarray, ndarray_to_tensor)
 
 # Don't use a namedtuple since nest considers that a tuple and unflattens and
 # flattens it.
-class ShardedNdArray(object):
+class ShardedNdArray():
   """Wrapper over ndarray that can contain tensors on multiple devices.
 
     This is returned by extensions.pmap, and contains the individual tensors on
